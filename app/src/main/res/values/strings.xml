@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">iot_controller</string>
+    <string name="action_config">配网</string>
+    <!-- config -->
+    <string name="textView_ssid">ssid: </string>
+    <string name="textView_bssid">bssid: </string>
+    <string name="textView_password">密码</string>
+    <string name="button_confirm">确认</string>
+    <string name="button_cancel">取消</string>
+    <string name="esptouch1_configure_result_failed_port">建立 EspTouch 任务失败, 端口可能被其他程序占用</string>
+    <string name="esptouch1_configure_result_failed">EspTouch 配网失败</string>
+    <string name="esptouch1_configure_result_success_item">BSSID: %1$s, 地址: %2$s</string>
+    <string name="esptouch1_configure_result_success">EspTouch 完成</string>
+    <string name="esptouch1_about_version">EspTouch 版本: %s</string>
+    <string name="about_app_version">App 版本: %s</string>
+    <string name="menu_item_about">关于 App</string>
+    <string name="esptouch_message_permission">需要位置权限来获取 Wi-Fi 信息。 \n点击申请权限</string>
+    <string name="esptouch_message_location">请打开 GPS 以获取 Wi-Fi 信息。</string>
+    <string name="esptouch_message_wifi_connection">请先连上 Wi-Fi</string>
+    <string name="esptouch_message_wifi_frequency">当前连接的是 5G Wi-Fi, 设备仅支持 2.4G Wi-Fi</string>
+    <string name="esptouch1_location_permission_title">⚠️警告️</string>
+    <string name="esptouch1_location_permission_message">在 Android M 及以上版本，如果您禁止授权位置权限，APP将无法获取 Wi-Fi 信息。</string>
+    <string name="esptouch1_wifi_5g_message">设备不支持 5G Wi-Fi, 请确认当前连接的 Wi-Fi 为 2.4G, 或者您可以尝试选择组播</string>
+    <string name="esptouch1_configure_wifi_change_message">Wi-Fi 已断开或发生了变化</string>
+    <string name="button_beginOTA">打开OTA</string>
+    <string name="button_endOTA">关闭OTA</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="button_open">开</string>
+    <string name="button_close">关</string>
+    <string name="button_switch">切换</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_config">ConfigActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+</resources>
