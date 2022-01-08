@@ -120,7 +120,8 @@ public class ConfigActivity extends EspTouchActivityAbs {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
         if (requestCode == REQUEST_PERMISSION) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 onWifiChanged();
@@ -187,7 +188,8 @@ public class ConfigActivity extends EspTouchActivityAbs {
     public void executeEsptouch(View view) {
         byte[] ssid = mSsidBytes == null ? ByteUtil.getBytesByString(this.mSsid)
                 : mSsidBytes;
-        String pwdStr = Objects.requireNonNull(mBinding.textInputLayoutPassword.getEditText()).getText().toString();
+        String pwdStr = Objects.requireNonNull(mBinding.textInputLayoutPassword.getEditText()).
+                getText().toString();
         byte[] password = ByteUtil.getBytesByString(pwdStr);
         byte[] bssid = TouchNetUtil.parseBssid2bytes(this.mBssid);
 //        CharSequence devCountStr = mBinding.deviceCountEdit.getText();
@@ -213,7 +215,8 @@ public class ConfigActivity extends EspTouchActivityAbs {
     }
 
 
-    private static class EsptouchAsyncTask4 extends AsyncTask<byte[], IEsptouchResult, List<IEsptouchResult>> {
+    private static class EsptouchAsyncTask4 extends AsyncTask<byte[], IEsptouchResult,
+            List<IEsptouchResult>> {
         private final WeakReference<ConfigActivity> mActivity;
 
         private final Object mLock = new Object();
@@ -273,7 +276,8 @@ public class ConfigActivity extends EspTouchActivityAbs {
                 byte[] apPassword = params[2];
                 byte[] deviceCountData = params[3];
                 byte[] broadcastData = params[4];
-                taskResultCount = deviceCountData.length == 0 ? -1 : Integer.parseInt(new String(deviceCountData));
+                taskResultCount = deviceCountData.length == 0 ? -1 :
+                        Integer.parseInt(new String(deviceCountData));
                 Context context = activity.getApplicationContext();
                 mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword, context);
                 mEsptouchTask.setPackageBroadcast(broadcastData[0] == 1);

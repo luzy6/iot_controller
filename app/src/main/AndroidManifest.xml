@@ -24,6 +24,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Iot_controller">
         <receiver
+            android:name=".UDPReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
             android:name=".IotAppWidget"
             android:exported="true">
             <intent-filter>

@@ -1,8 +1,11 @@
 package com.example.iot_controller;
 
+import android.annotation.SuppressLint;
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
+import android.content.Intent;
 import android.widget.RemoteViews;
 
 /**
@@ -13,12 +16,17 @@ public class IotAppWidget extends AppWidgetProvider {
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-        CharSequence widgetText = context.getString(R.string.appwidget_text);
-        // Construct the RemoteViews object
+//        CharSequence widgetText = context.getString(R.string.appwidget_text);
+//        // Construct the RemoteViews object
+//        views.setTextViewText(R.id.appwidget_text, widgetText);
+//
+//        // Instruct the widget manager to update the widget
+        Intent intent = new Intent(context, UDPReceiver.class);
+        intent.putExtra(UDPReceiver.EXTRA_DATA, UDPReceiver.SWITCH);
+        @SuppressLint("UnspecifiedImmutableFlag") PendingIntent pendingIntent =
+                PendingIntent.getBroadcast(context, 0, intent, 0);
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.iot_app_widget);
-        views.setTextViewText(R.id.appwidget_text, widgetText);
-
-        // Instruct the widget manager to update the widget
+        views.setOnClickPendingIntent(R.id.layout_widget, pendingIntent);
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 

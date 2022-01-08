@@ -106,13 +106,15 @@ public abstract class EspTouchActivityAbs extends AppCompatActivity {
             if (!locationGranted) {
                 String[] splits = getString(R.string.esptouch_message_permission).split("\n");
                 if (splits.length != 2) {
-                    throw new IllegalArgumentException("Invalid String @RES esptouch_message_permission");
+                    throw new IllegalArgumentException(
+                            "Invalid String @RES esptouch_message_permission");
                 }
                 SpannableStringBuilder ssb = new SpannableStringBuilder(splits[0]);
                 ssb.append('\n');
                 SpannableString clickMsg = new SpannableString(splits[1]);
                 ForegroundColorSpan clickSpan = new ForegroundColorSpan(0xFF0022FF);
-                clickMsg.setSpan(clickSpan, 0, clickMsg.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+                clickMsg.setSpan(clickSpan, 0, clickMsg.length(),
+                        Spannable.SPAN_INCLUSIVE_INCLUSIVE);
                 ssb.append(clickMsg);
                 result.message = ssb;
                 return result;

@@ -6,7 +6,7 @@
     android:initialLayout="@layout/iot_app_widget"
     android:minWidth="40dp"
     android:minHeight="40dp"
-    android:previewImage="@drawable/example_appwidget_preview"
+    android:previewImage="@drawable/ic_launcher_foreground"
     android:previewLayout="@layout/iot_app_widget"
     android:resizeMode="horizontal|vertical"
     android:targetCellWidth="1"
